@@ -1,5 +1,5 @@
 (async () => {
-  const TAGE = 3; // 1, 2 oder 3
+  const TAGE = 3;
   const PAUSE_MS = 300;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -10,7 +10,6 @@
   let erfolg = 0, fehler = 0, uebersprungen = 0;
 
   for (const building of buildings) {
-    // Leitstellen überspringen (kein Personal)
     if (building.building_type === 6) { uebersprungen++; continue; }
 
     await sleep(PAUSE_MS);
