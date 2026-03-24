@@ -27,7 +27,9 @@ Automatisch alle Wachen auf Personalsuche stellen – ohne jede Wache einzeln an
 | Firefox | `F12` oder `Strg + Shift + K` |
 | Edge | `F12` oder `Strg + Shift + J` |
 
-Dann oben auf den Reiter **„Console"** klicken.
+Dann oben auf den Reiter **"Console"** klicken.
+
+Falls das nicht geht, funktioniert meist ein Klick auf 3 Striche (meist oben rechts), und dann unter "Weitere Tools" -> "Entwickleroptionen".
 
 ### 3. Skript einfügen & starten
 
@@ -62,17 +64,6 @@ const PAUSE_MS = 300; // Pause zwischen Anfragen in Millisekunden
 
 ---
 
-## 🔍 Wie wurde der Endpunkt gefunden?
-
-Da Leitstellenspiel keine öffentliche API-Dokumentation hat, wurde der echte Netzwerk-Request mit den Browser-Entwicklertools abgehört:
-
-1. `F12` → Reiter **„Network"** öffnen
-2. Im Spiel auf eine Wache klicken → „Neue Leute werben" → „3 Tage werben"
-3. Im Network-Tab den Request beobachten
-
-Ergebnis: Das Spiel ruft intern `/buildings/{id}/hire_do/{tage}` auf – ein einfacher GET-Request.
-
----
 
 ## ❓ Häufige Fragen
 
