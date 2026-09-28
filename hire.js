@@ -83,7 +83,6 @@
     const tag = `[${idx}/${total}]`;
     const label = `${building.caption} (ID ${building.id})`;
 
-    // Typ überspringen?
     if (building.building_type in SKIP_TYPES) {
       const typeName = SKIP_TYPES[building.building_type];
       skipCounts[typeName] = (skipCounts[typeName] ?? 0) + 1;
